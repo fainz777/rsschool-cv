@@ -25,6 +25,9 @@ You can find examples of my code on my [githab account](https://github.com/fainz
 * **CRM System** - a saas CRM project. Write cross-browser and cross-platform HTML/CSS, write JS scirps based on jQuery framework
 
 ## Education
-
+* [HTML5 Part 1: HTML5 Coding Essentials and Best Practices](https://courses.edx.org/certificates/366897c8f6234c179deb8916f5f491d1)
+* [Codeacademy](https://www.codecademy.com/profiles/codeSlayer80976)
+* [htmlacademy](https://htmlacademy.ru/profile/id2818)
+* Institute of International Trade and Law
 
 ## Languages
