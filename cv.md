@@ -31,3 +31,6 @@ You can find examples of my code on my [githab account](https://github.com/fainz
 * Institute of International Trade and Law
 
 ## Languages
+* **English** &mdash; intermediate level
+* **German** &mdash; elementary level
+* **Spanish** &mdash; elementary level
