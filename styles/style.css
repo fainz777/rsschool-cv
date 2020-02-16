@@ -1,0 +1,380 @@
+/*############################################################################
+	1. Base styles.
+############################################################################*/
+/* ---------------------------------------------------------------------------
+	1.1. Base Styles
+--------------------------------------------------------------------------- */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+div,
+form,
+fieldset,
+iframe {
+    display: block;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+a {
+    color: #378cb8;
+    transition: .3s;
+}
+
+a:hover {
+    color: #0f3b52;
+}
+
+a img {
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+
+
+/* --------------------------------------------------------------------------
+	1.2. Typography
+--------------------------------------------------------------------------- */
+h1 {
+    font-size: 30px;
+    margin: 0 0 .6em;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0 0 .3em;
+}
+
+p {
+    margin: 1em 0;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+p:last-child{
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 1em 0;
+    padding: 0 0 0 1.7em;
+}
+
+li {
+    margin: .5em 0;
+}
+
+li:first-child {
+    margin-top: 0;
+}
+
+li:last-child{
+    margin-bottom: 0;
+}
+/*############################################################################
+	2. Helpers.
+############################################################################*/
+.custom_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/*############################################################################
+	3. Layout.
+#############################################################################*/
+.page_wrapper {
+    padding: 0 20px;
+}
+
+@media (min-width: 600px) {
+    .page_wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+.page_header {
+    background: #5f5e5e;
+    margin: 0 -20px;
+    padding: 20px 10px;
+    color: #d4d4d4;
+    border-bottom: 10px solid #00ca6d;
+}
+@media (min-width: 600px) {
+    .page_header {
+        margin: 0 0 20px;
+        border-bottom: none;
+        background: #018e90;
+        color: #fff;
+    }
+
+    .page_header__inner {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.page_header__img_wrapper {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .page_header__img_wrapper {
+        display: block;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .page_header__img_wrapper:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        opacity: .1;
+        z-index: 10;
+    }
+
+    .page_header__img {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -50%;
+        transform: translateY(-50px);
+        z-index: 1;
+    }
+}
+
+.page_header h1 {
+    margin: 0;
+}
+
+.page_header p {
+    margin: 0 0 0 2px;
+}
+
+.page_main {
+    margin: 0 -20px;
+    padding: 0 20px;
+    background: #ccc;
+}
+
+@media (min-width: 600px) {
+    .page_main {
+        background: none;
+    }
+
+    .cv_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+/*############################################################################
+	4. Elements.
+#############################################################################*/
+.tag {
+    display: inline-block;
+    background: #383838;
+    color: #fefefe;
+    transform: skewX(-25deg);
+}
+
+.tag_inner {
+    display: block;
+    padding: 5px 12px;
+    transform: skewX(25deg);
+    font-size: 14px;
+}
+/*############################################################################
+	5. Blocks.
+#############################################################################*/
+/* --------------------------------------------------------------------------
+	5.1. CV Section Commom
+--------------------------------------------------------------------------- */
+.cv_section {
+    position: relative;
+    padding: 20px 0;
+}
+
+.cv_section:after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+    height: 1px;
+    background: #02d875;
+}
+
+.cv_section:last-child:after {
+    content: none;
+}
+
+@media (min-width: 600px) {
+    .cv_section {
+        padding: 20px;
+    }
+
+    .cv_section:after {
+        content: none;
+    }
+}
+/* --------------------------------------------------------------------------
+	5.2. CV Section Contact Info
+--------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+    .cv_section__contact_info {
+        background: #4FFCFF;
+        order: 1;
+    }
+}
+.cv_section__contact_info__list_item {
+    margin: .5em 0;
+}
+
+.cv_section__contact_info__list_item_icon {
+    margin-right: 5px;
+}
+
+
+/* --------------------------------------------------------------------------
+	5.3. CV Section About Me
+--------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+    .cv_section__about_me {
+        background: #48E8BD;
+        order: 0;
+    }
+}
+/* --------------------------------------------------------------------------
+	5.4. CV Section Skils
+--------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+    .cv_section__skils {
+        grid-column: 1 / span 2;
+        background: #5CFFA5;
+        order: 2;
+    }
+}
+
+@media (min-width: 800px) {
+    .cv_section__skils {
+        grid-column: auto;
+    }
+}
+
+.cv_section__skils__list_item {
+    margin: 0 0 7px;
+}
+
+.cv_section__skils__list_item_inner {
+    font-weight: normal;
+}
+
+/* --------------------------------------------------------------------------
+	5.5. CV Section Code Example
+--------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+    .cv_section__code_exaple {
+        order: 4;
+        background: #48E8BD;
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (min-width: 800px) {
+    .cv_section__code_exaple {
+        grid-column: auto;
+        order: 3;
+    }
+}
+
+/* --------------------------------------------------------------------------
+	5.6. CV Section Experience
+--------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+    .cv_section__experience {
+        grid-column: 1 / span 2;
+        background: #4FFCFF;
+        order: 3;
+    }
+}
+
+@media (min-width: 800px) {
+    .cv_section__experience {
+        grid-column: auto;
+        order: 4;
+    }
+}
+
+.cv_section__experience_list_item {
+    margin: 1em 0;
+}
+
+/* --------------------------------------------------------------------------
+	5.7. CV Section Code Education
+--------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+    .cv_section__education {
+        order: 5;
+        background: #68FF4F;
+    }
+}
+
+/* --------------------------------------------------------------------------
+	5.8. CV Section Code Languages
+--------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+    .cv_section__languages {
+        order: 6;
+        background: #48E863;
+    }
+}
+
+@media (min-width: 800px) {
+    .cv_section__languages {
+        grid-column: 1 / span 2;
+        order: 6;
+    }
+}
